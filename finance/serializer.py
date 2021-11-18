@@ -14,7 +14,7 @@ class SupportSerializer(serializers.ModelSerializer):
 class StaffSerializer(serializers.ModelSerializer):
     class Meta:
         model=Staff
-        fields=['__all__']  
+        fields='__all__'  
 class PayrollSerializer(serializers.ModelSerializer):
     class Meta:
         model=Payroll
