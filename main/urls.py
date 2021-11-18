@@ -37,8 +37,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^rest-auth/', include('rest_auth.urls')),
-    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+   
     url(r'^api-auth/', obtain_auth_token),
     url("finance/", include("finance.urls")), # finance
     path("redoc/", schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
