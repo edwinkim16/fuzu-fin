@@ -57,7 +57,14 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_ORIGINS = [
     'the deployed url',
+    
 ]
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:3000',
+#     'http://localhost:8000',
+#     'http://localhost:8080',
+# ]
+
 
 #.....
 REST_FRAMEWORK = {
