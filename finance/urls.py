@@ -12,6 +12,8 @@ urlpatterns = [
     url(r'^api/staffw/', views.StaffList.as_view()), # single staff
     url(r'api/pay/(?P<pk>[0-9]+)/$', views.PayDetail.as_view()), # list of payroll
     url(r'^api/payw/', views.PayList.as_view()), # single payroll
+    url(r'^api/expensesw/', views.ExpensesList.as_view()), # list of expense
+    url(r'api/expenses/(?P<pk>[0-9]+)/$', views.ExpenseDetail.as_view()), # single expense
     
 ]
 

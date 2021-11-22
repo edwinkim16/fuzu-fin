@@ -58,4 +58,25 @@ class Support(models.Model):
     message = models.TextField()  
 
     def __str__(self):
-        return self.message             
+        return self.message         
+
+class Expenses(models.Model):
+    name = models.CharField(max_length=100)
+    amount = models.DecimalField(decimal_places=2, max_digits=40)
+    merchant = models.CharField(max_length=100,default='MERCHANTS')
+    date_processed = models.DateTimeField(auto_now_add=True)
+    approved_expenses = models.IntegerField(default='0')
+    total_amount = models.DecimalField(decimal_places=2,max_digits=40,default='0')
+    PENDING= 'pending'
+    ACCEPTED='accepted'
+    REJECTED = 'rejected'
+
+    STATUS = (
+        (PENDING, 'pending'),
+        (ACCEPTED, 'accepted'),
+        (REJECTED, 'rejected'),
+    )
+    status = models.CharField(max_length=20, choices=STATUS, default='pending')
+
+    def __str__(self):
+        return self.total_amount                    
